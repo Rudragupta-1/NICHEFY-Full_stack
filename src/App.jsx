@@ -12,7 +12,7 @@ import MyJobs from './pages/my-jobs';
 import { ThemeProvider } from "./components/theme-provider"
 const router = createBrowserRouter([
   {
-    element: <AppLayout />,
+    element: <AppLayout />, 
     children: [
       {
         path: '/',
