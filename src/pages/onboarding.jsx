@@ -23,7 +23,7 @@ const Onboarding = () => {
         console.error("Error updating role:", err);
       });
   };
-
+  
   useEffect(() => {
     if (user?.unsafeMetadata?.role) {
       navigateUser(user.unsafeMetadata.role);
