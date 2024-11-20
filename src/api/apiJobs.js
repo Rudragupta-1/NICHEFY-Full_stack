@@ -40,7 +40,7 @@ export async function getJobs(token,{location,comapny_id,searchQuery}) {
 
 
 export async function saveJob(token, { alreadySaved }, saveData) {
-  const supabase = await SupabaseClient(token);
+  // const supabase = await SupabaseClient(token);
 
   if (alreadySaved) {
     // If the job is already saved, remove it
