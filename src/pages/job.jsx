@@ -1,4 +1,5 @@
 import { getSingleJob, updateHiringStatus } from '@/api/apiJobs';
+import ApplicationCard from '@/components/application-card';
 import {ApplyJobDrawer} from '@/components/apply-job';
 import useFetch from '@/hooks/use-fetch';
 import { useUser } from '@clerk/clerk-react'
@@ -39,8 +40,8 @@ const JobPage = () => {
   if (!isLoaded || loadingJob) {
     return <BarLoader className='mb-4' width={"100%"} color="#36d7b7" />
   }
-  console.log('Job Recruiter ID:', job?.recruiter_id);
-  console.log('Current User ID:', user?.id);
+  // console.log('Job Recruiter ID:', job?.recruiter_id);
+  // console.log('Current User ID:', user?.id);
   return (
     <div className='flex flex-col gap-8 mt-5'>
       <div className='flex flex-col-reverse gap-6 md:flex-row justify-between items-center'>
@@ -107,7 +108,7 @@ const JobPage = () => {
           applied={job?.applications?.find((ap) => ap.candidate_id === user.id)}
         />
       )}
-      {/* {loadingHiringStatus && <BarLoader width={"100%"} color="#36d7b7" />}
+      {loadingHiringStatus && <BarLoader width={"100%"} color="#36d7b7" />}
       {job?.applications?.length > 0 && job?.recruiter_id === user?.id && (
         <div className="flex flex-col gap-2">
           <h2 className="font-bold mb-4 text-xl ml-1">Applications</h2>
@@ -117,7 +118,7 @@ const JobPage = () => {
             );
           })}
         </div>
-      )} */}
+      )}
 
     </div>
   )
