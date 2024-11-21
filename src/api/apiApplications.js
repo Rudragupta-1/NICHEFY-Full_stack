@@ -8,6 +8,8 @@ if (!supabaseUrl || !supabaseKey) {
   }
 const supabase = createClient(supabaseUrl, supabaseKey);
 // - Apply to job ( candidate )
+
+
 export async function applyToJob(token, _, jobData) {
 //   const supabase = await SupabaseClient(token);
 
