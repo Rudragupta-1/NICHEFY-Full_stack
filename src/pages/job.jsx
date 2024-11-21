@@ -38,6 +38,8 @@ const JobPage = () => {
   if (!isLoaded || loadingJob) {
     return <BarLoader className='mb-4' width={"100%"} color="#36d7b7" />
   }
+  console.log('Job Recruiter ID:', job?.recruiter_id);
+console.log('Current User ID:', user?.id);
   return (
     <div className='flex flex-col gap-8 mt-5'>
       <div className='flex flex-col-reverse gap-6 md:flex-row justify-between items-center'>
