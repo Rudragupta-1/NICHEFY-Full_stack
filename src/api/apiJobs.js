@@ -93,7 +93,7 @@ export async function getSingleJob(token, { job_id }) {
 }
 
 export async function updateHiringStatus(token, { job_id }, isOpen) {
-  const supabase = await supabaseClient(token);
+  // const supabase = await supabaseClient(token);
   const { data, error } = await supabase
     .from("jobs")
     .update({ isOpen })
